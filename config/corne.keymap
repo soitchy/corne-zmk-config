@@ -27,9 +27,9 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  | ' " | BKSP |
-// | CTRL |  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  |  '   |
-// | SHFT |  Z  |  X  |  C  |  D  |  V  |   |  K  |  H   |  ,  |  .  |  /  | ESC  |
+// |  TAB |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  | ' " | DEL  |
+// | CTRL |  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  |  RET |
+// | SHFT |  Z  |  X  |  C  |  D  |  V  |   |  K  |  H   |  ,  |  .  |  /  | LALT |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
    &kp ESC   &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   &kp SQT  &kp DEL
@@ -40,15 +40,15 @@
                 };
                 lower_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// |  TAB |  1  |  2  |  3  |  4  |  5  |   | $ # | []  |  <> | - + |  _ ^|      |
+// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | & | | {}  |  () | = * | ; : |      |
+// | SHFT |     |     |     |     |     |   | ` ~ | / \ | @   |     |     |      |
+//                    | GUI |     | SPC |   |     |     |     |
                         bindings = <
-   &trans    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-   &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &trans  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-                                    &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
+   &trans    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5      &ht DLLR HASH   &ht RBKT LBKT   &ht GT LT       &ht PLUS MINUS     &ht CARET UNDER   &trans
+   &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &ht PIPE AMPS   &ht RBRC LRBC   &ht RPAR LPAR   &ht EQUAL STAR T   &ht SEMI COLON    &trans
+   &trans  &trans       &trans       &trans       &trans       &trans        &ht GRAVE TILDE &ht FSLH BSLH   &kp AT          &none              &none             &trans
+                                    &kp LGUI     &trans       &kp SPACE      &none           &trans          &trans
                         >;
                 };
 
