@@ -40,15 +40,15 @@
                 };
                 lower_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   | $ # | []  |  <> | - + |     |      |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | & | | {}  |  () | = * | ; : |      |
-// | SHFT |     |     |     |     |     |   | ` ~ | / \ | @   | _ ^ |     |      |
-//                    | GUI |     | SPC |   |     |     |     |
+// |  v   |     |  1  |  2  |  3  |  UP  |   | $ # | []  |  <> | - + |     |  v   |
+// |  v   |     |  4  |  5  |  6  | DOWN |   | & | | {}  |  () | = * | ; : |  v   |
+// |  v   |     |  7  |  8  |  9  |  0   |   | ` ~ | / \ | @   | _ ^ |     |  v   |
+//                    |  v  |  v  | MO2  |   |     |  v  |  v  |
                         bindings = <
-   &trans    &none     &kp N1       &kp N2       &kp N3       &none         &ht DLLR HASH   &ht RBKT LBKT   &ht GT LT       &ht PLUS MINUS     &none             &trans
-   &trans    &none     &kp N4       &kp N5       &kp N6       &none         &ht PIPE AMPS   &ht RBRC LBRC   &ht RPAR LPAR   &ht EQUAL STAR     &ht SEMI COLON    &trans
+   &trans    &none     &kp N1       &kp N2       &kp N3       &kp UP         &ht DLLR HASH   &ht RBKT LBKT   &ht GT LT       &ht PLUS MINUS     &none             &trans
+   &trans    &none     &kp N4       &kp N5       &kp N6       &kp DOWN       &ht PIPE AMPS   &ht RBRC LBRC   &ht RPAR LPAR   &ht EQUAL STAR     &ht SEMI COLON    &trans
    &trans    &none     &kp N7       &kp N8       &kp N9       &kp N0        &ht GRAVE TILDE &ht FSLH BSLH   &kp AT          &ht CARET UNDER    &none             &trans
-                                    &kp LGUI     &trans       &kp SPACE      &none           &trans          &trans
+                                    &trans       &trans       &mo 2         &none           &trans          &trans
                         >;
                 };
 
