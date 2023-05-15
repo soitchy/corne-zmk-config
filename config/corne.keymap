@@ -49,28 +49,28 @@
                 lower_layer {
 // -----------------------------------------------------------------------------------------
 // |  v   |     |  1  |  2  |  3  |  UP  |   | $ # | []  |  <> | - + |     |  v   |
-// |  v   |     |  4  |  5  |  6  | DOWN |   | & | | {}  |  () | = * | ; : |  v   |
-// |  v   |     |  7  |  8  |  9  |  0   |   | ` ~ | / \ | @   | _ ^ |     |  v   |
+// |  v   |LEFT |  4  |  5  |  6  | DOWN |   | & | | {}  |  () | = * | ; : |  v   |
+// |  v   |RGHT |  7  |  8  |  9  |  0   |   | ` ~ | / \ | @   | _ ^ |     |  v   |
 //                    |  v  |  v  | MO2  |   |     |  v  |  v  |
                         bindings = <
    &trans    &none     &kp N1       &kp N2       &kp N3       &kp UP         &ht DLLR HASH   &ht RBKT LBKT   &ht GT LT       &ht PLUS MINUS     &none             &trans
-   &trans    &none     &kp N4       &kp N5       &kp N6       &kp DOWN       &ht PIPE AMPS   &ht RBRC LBRC   &ht RPAR LPAR   &ht EQUAL STAR     &ht SEMI COLON    &trans
-   &trans    &none     &kp N7       &kp N8       &kp N9       &kp N0         &ht GRAVE TILDE &ht FSLH BSLH   &kp AT          &ht CARET UNDER    &none             &trans
+   &trans    &kp LEFT  &kp N4       &kp N5       &kp N6       &kp DOWN       &ht PIPE AMPS   &ht RBRC LBRC   &ht RPAR LPAR   &ht EQUAL STAR     &ht SEMI COLON    &trans
+   &trans    &kp RIGHT &kp N7       &kp N8       &kp N9       &kp N0         &ht GRAVE TILDE &ht FSLH BSLH   &kp AT          &ht CARET UNDER    &none             &trans
                                     &trans       &trans       &mo 2          &none           &trans          &trans
                         >;
                 };
 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// |  v   |     | F1  | F2  | F3  | PS  |   |     | F10 | F11 |  F12|     |  v   |
+// |  v   |     | F4  | F5  | F6  |     |   |     |     |     |     |     |  v   |
+// |  v   |     | F7  | F8  | F9  |     |   |     |     |     |     |     |  v   |
+//                    |  v  |  v  |     |   | MO1 |  v  |  v  |
                         bindings = <
-   &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
-   &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-   &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
-                             &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
+   &trans    &none    &kp F1  &kp F2   &kp F3    &kp PSCRN   &none     &kp F10   &kp F11   &kp F12  &none    &trans
+   &trans    &none    &kp F4  &kp F5   &kp F6    &none       &none     &none     &none     &none    &none    &trans
+   &trans    &none    &kp F7  &kp F8   &kp F10   &none       &none     &none     &none     &none    &none    &trans
+                             &trans   &trans   &none         &MO 1     &trans    &trans
                         >;
                 };
         };
