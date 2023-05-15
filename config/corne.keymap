@@ -69,8 +69,8 @@
                         bindings = <
    &trans    &none    &kp F1  &kp F2   &kp F3    &kp PSCRN   &none     &kp F10   &kp F11   &kp F12  &none    &trans
    &trans    &none    &kp F4  &kp F5   &kp F6    &none       &none     &none     &none     &none    &none    &trans
-   &trans    &none    &kp F7  &kp F8   &kp F10   &none       &none     &none     &none     &none    &none    &trans
-                             &trans   &trans   &none         &MO 1     &trans    &trans
+   &trans    &none    &kp F7  &kp F8   &kp F9    &none       &none     &none     &none     &none    &none    &trans
+                               &trans   &trans   &none       &mo 1     &trans    &trans
                         >;
                 };
         };
