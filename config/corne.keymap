@@ -20,6 +20,14 @@
                 global-quick-tap;
                 bindings = <&kp>, <&kp>;
                 };
+
+                qmarkexcl: qmark_excl {
+                compatible = "zmk,behavior-mod-morph";
+                label = "QUESTIONMARK_EXCLAMATION";
+                #binding-cells = <0>;
+                bindings = <&kp QMARK>, <&kp EXCL>;
+                mods = <(MOD_LSFT)>;
+                };
         };
 
         keymap {
@@ -32,9 +40,9 @@
 // | LCTRL|  Z  |  X  |  C  |  D  |  V  |   |  K  |  H   |  ,  |  .  |  /  | LALT |
 //                    | SHFT|BSPC | MO2 |   | MO1 | SPC  | WIN |
                         bindings = <
-   &kp ESC   &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   &kp SQT  &kp DEL
-   &kp TAB   &kp A &kp R &kp S &kp T &kp G   &kp M &kp N  &kp E     &kp I   &kp O    &kp RET
-   &kp LCTRL &kp Z &kp X &kp C &kp D &kp V   &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &kp LALT
+   &kp ESC   &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   &kp SQT    &kp DEL
+   &kp TAB   &kp A &kp R &kp S &kp T &kp G   &kp M &kp N  &kp E     &kp I   &kp O      &kp RET
+   &kp LCTRL &kp Z &kp X &kp C &kp D &kp V   &kp K &kp H  &kp COMMA &kp DOT &qmarkexcl &kp LALT
                  &kp LSHFT &kp BSPC  &mo 2   &mo 1 &kp SPACE &kp LGUI
                         >;
                 };
@@ -47,8 +55,8 @@
                         bindings = <
    &trans    &none     &kp N1       &kp N2       &kp N3       &kp UP         &ht DLLR HASH   &ht RBKT LBKT   &ht GT LT       &ht PLUS MINUS     &none             &trans
    &trans    &none     &kp N4       &kp N5       &kp N6       &kp DOWN       &ht PIPE AMPS   &ht RBRC LBRC   &ht RPAR LPAR   &ht EQUAL STAR     &ht SEMI COLON    &trans
-   &trans    &none     &kp N7       &kp N8       &kp N9       &kp N0        &ht GRAVE TILDE &ht FSLH BSLH   &kp AT          &ht CARET UNDER    &none             &trans
-                                    &trans       &trans       &mo 2         &none           &trans          &trans
+   &trans    &none     &kp N7       &kp N8       &kp N9       &kp N0         &ht GRAVE TILDE &ht FSLH BSLH   &kp AT          &ht CARET UNDER    &none             &trans
+                                    &trans       &trans       &mo 2          &none           &trans          &trans
                         >;
                 };
 
